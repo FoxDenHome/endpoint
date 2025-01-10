@@ -2,8 +2,8 @@
 Description=Run /opt/endpoint/backup.sh
 
 [Timer]
-OnBootSec=12h
-OnUnitActiveSec=1d
+OnBootSec=30m
+OnUnitActiveSec=1h
 
 [Install]
 WantedBy=timers.target
