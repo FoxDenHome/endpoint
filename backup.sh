@@ -5,4 +5,4 @@ if /opt/endpoint/is-on-battery.sh; then
 	exit 0
 fi
 
-/opt/endpoint/restic.sh /opt/backup/run.sh --exclude-caches / /efi
+/opt/endpoint/restic.sh /opt/backup/run.sh / /efi
