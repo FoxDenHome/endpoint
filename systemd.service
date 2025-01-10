@@ -1,0 +1,12 @@
+[Unit]
+Description=Run /opt/endpoint/backup.sh
+
+[Service]
+User=root
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/opt/endpoint/backup.sh
+
+[Install]
+WantedBy=multi-user.target
