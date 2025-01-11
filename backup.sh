@@ -5,4 +5,4 @@ if /opt/endpoint/is-on-battery.sh; then
 	exit 0
 fi
 
-/opt/endpoint/restic.sh /opt/backup/run.sh / /efi
+/usr/bin/systemd-inhibit --no-ask-password --why='restic backup' --no-pager /opt/endpoint/restic.sh /opt/backup/run.sh / /efi
