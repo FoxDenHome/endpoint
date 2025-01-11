@@ -6,7 +6,7 @@ User=root
 Type=simple
 Restart=on-failure
 RestartSec=1
-ExecStart=/opt/endpoint/backup.sh
+ExecStart=/usr/bin/systemd-inhibit --no-ask-password --why='restic backup' --no-pager /opt/endpoint/backup.sh
 
 [Install]
 WantedBy=multi-user.target
