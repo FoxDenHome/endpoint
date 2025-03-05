@@ -1,3 +1,3 @@
 #!/bin/sh
-rsync --delete -avogXAE /boot/firmware/ /boot2/firmware/
+sudo rsync --delete -avogXAE /boot/firmware/ /boot2/firmware/
 
