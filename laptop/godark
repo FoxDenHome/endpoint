@@ -6,6 +6,6 @@ source /opt/endpoint/laptop/shared.sh
 setec off
 
 setscr 0
-setkb 25
+setkb 20
 
 powerprofilesctl set power-saver
