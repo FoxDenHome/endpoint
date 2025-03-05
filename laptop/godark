@@ -1,0 +1,11 @@
+#!/bin/sh
+set -x
+
+source /opt/endpoint/laptop/shared.sh
+
+setec off
+
+setscr 0
+setkb 25
+
+powerprofilesctl set power-saver
