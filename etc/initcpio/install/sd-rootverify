@@ -1,0 +1,15 @@
+#!/bin/sh
+
+build() {
+    add_binary "sha256sum"
+    add_binary "poweroff"
+
+    add_file '/usr/lib/systemd/rootverify'
+    add_systemd_unit 'rootverify.service'
+}
+
+help() {
+    echo 'sha256rum /dev/main/verify'
+}
+
+# vim: set ft=sh ts=4 sw=4 et:

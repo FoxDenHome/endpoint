@@ -1,0 +1,18 @@
+#!/usr/bin/ash
+
+while [ ! -e /dev/main/verify ]; do
+    echo 'Waiting for /dev/main/verify...'
+    sleep 1
+done
+
+SHA256_EXPECT="[HASH HERE]"
+SHA256_GOT="$(sha256sum /dev/main/verify | cut -d' ' -f1)"
+
+if [ "$SHA256_EXPECT" != "$SHA256_GOT" ]; then
+    poweroff -f
+    exit 1
+else
+    echo '/dev/main/verify OK!'
+fi
+
+# vim: set ft=sh ts=4 sw=4 et:
