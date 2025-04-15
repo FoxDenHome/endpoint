@@ -5,7 +5,7 @@ Description=Run /opt/endpoint/backup.sh
 User=root
 Type=simple
 Slice=opt-endpoint-backup.slice
-Restart=never
+Restart=no
 ExecStart=/opt/endpoint/backup.sh
 
 [Install]
